@@ -1,0 +1,156 @@
+<html>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://isotope.metafizzy.co/isotope.pkgd.min.js"></script>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<style>
+.btn {
+    background-color: transparent;
+}
+#heading {
+    text-align: center;
+}
+
+body {
+    background-color: #eeefe8
+}
+
+.description-container {
+    width:400; height: 50; background-color:#333; color: white
+}
+
+.description-text {
+    padding: 8px;
+}
+
+.under-nav.nav-pills > .active > a {
+    color: #000 !important;
+    background-color: transparent !important;
+    text-decoration: none;
+    border-radius:0px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #FF6600;
+}
+
+.under-nav.nav-pills > li > a {
+  border-radius:0px;
+  background-color: transparent !important;
+  font-size: 1.4em;
+}
+
+li {
+    width: 400px;
+    min-height: 250px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 4px;
+}
+
+</style>
+<body>
+<h1 style="background-color: black; margin: 0" id="heading"> <img style="margin: 10 0 15 0px" height=350 src="static/logo.png"> </h1>
+<div class="row" style="background-color: rgba(0,0,0,0.1); margin-top: 0">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+    <ul class="under-nav nav nav-pills nav-justified">
+      <li><a href="/">Home</a></li>
+      <li><a href="superga">Superga</a></li>
+      <li><a href="BSC">Body Science Compression</a></li>
+      <li class="active"><a href="mitre">Mitre</a></li>
+      <li><a href="about">About</a></li>
+    </ul>
+</div>
+<div class="col-md-1"></div>
+</div>
+<div height="10px">&nbsp;</div>
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+
+    Filter: 
+    <div class="btn-group">
+      <button type="button" class="btn btn-default" id="filter-all">All</button>
+      <button type="button" class="btn btn-default" id="filter-jerseys">Jerseys</button>
+      <button type="button" class="btn btn-default" id="filter-shorts">Shorts</button>
+      <button type="button" class="btn btn-default" id="filter-bottoms">Bottoms</button>
+      <button type="button" class="btn btn-default" id="filter-tights">Tights</button>
+      <button type="button" class="btn btn-default" id="filter-soccer">Soccer</button>
+      <button type="button" class="btn btn-default" id="filter-accessories">Accessories</button>
+      <button type="button" class="btn btn-default" id="filter-shoes-boots">Shoes/Boots</button>
+    </div>
+
+
+    <div id="isotope-container">
+        <ul>
+            
+            <li class="isotope-item item-bottoms">
+                <img src="static/Mitre/Bottoms/3Quater_Pants_1.png" width="400" />
+                <div class="description-container"><div class="description-text">3 QUARTER PANTS 1</div></div>            
+            </li>
+
+            <li class="isotope-item item-bottoms">
+                <img src="static/Mitre/Bottoms/3Quater_Pants_2.png" width="400" />
+                <div class="description-container"><div class="description-text">3 QUARTER PANTS 2</div></div>            
+            </li>
+
+            <li class="isotope-item item-bottoms">
+                <img src="static/Mitre/Bottoms/Bermudas_1.png" width="400" />
+                <div class="description-container"><div class="description-text">BERMUDAS 1</div></div>            
+            </li>
+
+            <li class="isotope-item item-bottoms">
+                <img src="static/Mitre/Bottoms/Bermudas_2.png" width="400" />
+                <div class="description-container"><div class="description-text">BERMUDAS 2</div></div>            
+            </li>
+
+            <li class="isotope-item item-bottoms">
+                <img src="static/Mitre/Bottoms/Track_Pants_1.png" width="400" />
+                <div class="description-container"><div class="description-text">TRACK PANTS</div></div>            
+            </li>
+
+        <ul>
+
+    </div>
+    </div>
+    <div class="col-md-2"></div>
+
+<script>
+var $container = $('#isotope-container');
+$container.isotope({
+  itemSelector: '.isotope-item',
+  layoutMode: 'fitRows',
+});
+
+$("#filter-all").click(function() {
+    $container.isotope({ filter: '' });
+});
+$("#filter-jerseys").click(function() {
+    $container.isotope({ filter: '.item-jerseys' });
+});
+$("#filter-shorts").click(function() {
+    $container.isotope({ filter: '.item-shorts' });
+});
+$("#filter-bottoms").click(function() {
+    $container.isotope({ filter: '.item-bottoms' });
+});
+$("#filter-tights").click(function() {
+    $container.isotope({ filter: '.item-tights' });
+});
+$("#filter-soccer").click(function() {
+    $container.isotope({ filter: '.item-soccer' });
+});
+$("#filter-accessories").click(function() {
+    $container.isotope({ filter: '.item-accessories' });
+});
+$("#filter-shoes-boots").click(function() {
+    $container.isotope({ filter: '.item-shoes-boots' });
+});
+</script>
+
+</div>
+
+</body>
+</html>
